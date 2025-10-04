@@ -3,301 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10th Standard Mathematics Model Paper (50 Marks)</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>10th Std Maths - Mobile Paper</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --surface-color: #ffffff;
+            --text-color: #212529;
+            --border-color: #dee2e6;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
         .container {
             max-width: 800px;
-            margin: 20px auto;
-            padding: 25px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 1rem auto;
+            padding: 1rem;
         }
-        h1, h2, h3 {
+
+        .header {
             text-align: center;
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
         }
-        h2 {
-            text-align: left;
-            font-size: 1.5em;
-            margin-top: 40px;
-            border-bottom: 1px solid #ccc;
+
+        .header h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 0;
         }
-        .header-info {
+        
+        .header p {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            margin-top: 0.25rem;
+        }
+        
+        .info-bar {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
-            font-weight: bold;
+            font-weight: 600;
+            background-color: var(--surface-color);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
         }
+
+        .part-header {
+            margin-top: 2.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .part-header h2 {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+        
+        .part-header p {
+            margin: 0.25rem 0 0;
+            color: var(--secondary-color);
+        }
+
         .question-block {
-            margin-bottom: 20px;
-            padding-left: 15px;
+            background: var(--surface-color);
+            border-radius: 8px;
+            margin-top: 1rem;
+            padding: 1rem 1.5rem;
+            box-shadow: var(--shadow);
         }
+        
         .question-content {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
         }
-        .marks-input {
-            width: 60px;
-            padding: 5px;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-left: 15px;
-        }
-        ol, ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 15px;
-        }
-        .options {
-            padding-left: 20px;
+
+        .marks-input-label {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
         }
+
+        .marks-input {
+            width: 50px;
+            padding: 0.3rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 0.25rem;
+        }
+
+        .mcq-options {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0;
+        }
+        
+        .mcq-options li {
+            padding: 0.5rem 0;
+        }
+        
+        .mcq-options label {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
         .total-section {
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #eaf2f8;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background-color: var(--surface-color);
             border-radius: 8px;
+            box-shadow: var(--shadow);
         }
+
         #calculate-btn {
-            padding: 10px 20px;
-            font-size: 1em;
-            background-color: #3498db;
+            padding: 0.8rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.2s, transform 0.2s;
         }
+
         #calculate-btn:hover {
-            background-color: #2980b9;
+            background-color: #0056b3;
+            transform: translateY(-2px);
         }
+
         #total-marks-display {
-            font-size: 1.8em;
+            font-size: 2rem;
             font-weight: bold;
-            color: #e74c3c;
+            color: var(--primary-color);
         }
+        
         .compulsory {
             font-weight: bold;
-            color: #c0392b;
+            color: #d9534f;
         }
+
+        math {
+          font-size: 1.1em;
+        }
+        
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .container { padding: 0.5rem; margin: 0.5rem auto; }
+            .info-bar { flex-direction: column; align-items: center; gap: 0.5rem; }
+            .question-block { padding: 1rem; }
+            .question-content { flex-direction: column; align-items: stretch; }
+            .marks-input-label { align-self: flex-end; }
+        }
+
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>10th Standard Mathematics</h1>
-        <h3>Unit Test Model Paper (Chapters 1-5)</h3>
-        <div class="header-info">
-            <span>Time Allowed: 1 Hour</span>
-            <span>Maximum Marks: 50</span>
+        <header class="header">
+            <h1>10th Standard Mathematics</h1>
+            <p>Unit Test (Chapters 1-5)</p>
+        </header>
+
+        <div class="info-bar">
+            <span>Time: 1 Hour</span>
+            <span>Max Marks: 50</span>
         </div>
 
-        <h2>Part - I (10 x 1 = 10 Marks)</h2>
-        <p><strong>Note:</strong> Answer all the questions.</p>
+        <div class="part-header">
+            <h2>Part - I (4 x 1 = 4 Marks)</h2>
+            <p><strong>Note:</strong> Answer all questions.</p>
+        </div>
         
         <div class="question-block">
-            <ol>
-                <li>
-                    <div class="question-content">
-                        <p>If $f(x) = x^2 - 1$, then $f(f(x))$ is:</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="question-content">
-                        <p>If the HCF of 65 and 117 is expressible in the form $65m - 117$, then the value of $m$ is:</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
-                    </div>
-                </li>
-                 <li>
-                    <div class="question-content">
-                        <p>If the first term of an A.P is 20 and the common difference is -2, then the 10th term is:</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="question-content">
-                        <p>The solution of $(2x-1)^2 = 9$ is equal to:</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="question-content">
-                        <p>The number of points of intersection of the quadratic polynomial $x^2 + 4x + 4$ with the X-axis is:</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
-                    </div>
-                </li>
-                 <li>
-                    <div class="question-content">
-                        <p>In $\triangle LMN$, $\angle L=60^\circ, \angle M=50^\circ$. If $\triangle LMN \sim \triangle PQR$ then the value of $\angle R$ is:</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
-                    </div>
-                </li>
-                 <li>
-                    <div class="question-content">
-                        <p>The area of a triangle with vertices $(0,0), (4,0)$ and $(0,5)$ is:</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="question-content">
-                        <p>The slope of the line joining $(2, -1)$ and $(4, 3)$ is:</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
-                    </div>
-                </li>
-                 <li>
-                    <div class="question-content">
-                        <p>The range of the relation $R = \{(x, x^2) | x \text{ is a prime number less than 13}\}$ is:</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
-                    </div>
-                </li>
-                 <li>
-                    <div class="question-content">
-                        <p>If $A$ is a $2 \times 3$ matrix and $B$ is a $3 \times 4$ matrix, how many columns does $AB$ have?</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
-                    </div>
-                </li>
-            </ol>
+            <div class="question-content">
+                <p>1. If <math><mi>n</mi><mo>(</mo><mi>A</mi><mo>&times;</mo><mi>B</mi><mo>)</mo><mo>=</mo><mn>6</mn></math> and <math><mi>A</mi><mo>=</mo><mo>{</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>}</mo></math> then <math><mi>n</mi><mo>(</mo><mi>B</mi><mo>)</mo></math> is</p>
+                <label class="marks-input-label">Marks<input type="number" class="marks-input" min="0" max="1"></label>
+            </div>
+            <ul class="mcq-options">
+                <li><label><input type="radio" name="q1"> (A) 1</label></li>
+                <li><label><input type="radio" name="q1"> (B) 2</label></li>
+                <li><label><input type="radio" name="q1"> (C) 3</label></li>
+                <li><label><input type="radio" name="q1"> (D) 6</label></li>
+            </ul>
         </div>
 
-        <h2>Part - II (5 x 2 = 10 Marks)</h2>
-        <p><strong>Note:</strong> Answer any 5 questions.</p>
         <div class="question-block">
-            <ol start="11">
-                <li>
-                     <div class="question-content">
-                        <p>A function $f$ is defined by $f(x)=3-2x$. Find $x$ such that $f(x^2)=(f(x))^2$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="question-content">
-                        <p>Find the 19th term of an A.P. $-11, -15, -19, \dots$</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>Find the LCM of $p^2-3p+2$ and $p^2-4$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>In $\triangle ABC$, $D$ and $E$ are points on the sides $AB$ and $AC$ respectively such that $DE \parallel BC$. If $AD = 8x-7$, $DB=5x-3$, $AE=4x-3$ and $EC=3x-1$, find the value of $x$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>Show that the points $P(-1.5, 3), Q(6, -2), R(-3, 4)$ are collinear.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>Find the sum of the series $1+2+3+ \dots +60$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>Form a quadratic equation whose roots are $7 + \sqrt{3}$ and $7 - \sqrt{3}$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
-                    </div>
-                </li>
-            </ol>
-        </div>
-
-        <h2>Part - III (4 x 5 = 20 Marks)</h2>
-        <p><strong>Note:</strong> Answer any 4 questions. <span class="compulsory">Question No. 25 is compulsory.</span></p>
-        <div class="question-block">
-            <ol start="18">
-                <li>
-                    <div class="question-content">
-                        <p>Let $f(x) = x-4, g(x) = x^2$ and $h(x) = 3x-5$. Show that $(f \circ g) \circ h = f \circ (g \circ h)$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="question-content">
-                        <p>Find the sum of all natural numbers between 300 and 600 which are divisible by 7.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>Find the square root of $36x^4 - 60x^3 + 61x^2 - 30x + 9$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                 <li>
-                     <div class="question-content">
-                        <p>State and prove the Basic Proportionality Theorem (Thales' Theorem).</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>Find the area of the quadrilateral formed by the points $(8,6), (5,11), (-5,12)$ and $(-4,3)$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                 <li>
-                     <div class="question-content">
-                        <p>Find the sum of the series $10^3 + 11^3 + \dots + 20^3$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                <li class="compulsory">
-                     <div class="question-content">
-                        <p><strong>(Compulsory)</strong> The average age of Vani, her father, and her grandfather is 53. One-half of her grandfather's age plus one-third of her father's age plus one-fourth of Vani's age is 65. Four years ago, if Vani's grandfather was four times as old as Vani, then how old are they all now?</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-            </ol>
+            <div class="question-content">
+                <p>2. The sum of the exponents of the prime factors in the prime factorization of 144 is</p>
+                 <label class="marks-input-label">Marks<input type="number" class="marks-input" min="0" max="1"></label>
+            </div>
+            <ul class="mcq-options">
+                <li><label><input type="radio" name="q2"> (A) 4</label></li>
+                <li><label><input type="radio" name="q2"> (B) 5</label></li>
+                <li><label><input type="radio" name="q2"> (C) 6</label></li>
+                <li><label><input type="radio" name="q2"> (D) 3</label></li>
+            </ul>
         </div>
         
-        <h2>Part - IV (1 x 10 = 10 Marks)</h2>
-        <p><strong>Note:</strong> Answer any one of the following.</p>
         <div class="question-block">
-            <ol start="26">
-                <li>
-                    <div class="question-content">
-                        <div>
-                            <p>Construct a triangle similar to a given triangle PQR with its sides equal to $\frac{4}{5}$ of the corresponding sides of the triangle PQR (scale factor $\frac{4}{5} < 1$).</p>
-                            <p style="text-align: center; font-weight: bold;">(OR)</p>
-                            <p>Draw the graph of $y = x^2 - 4x + 4$ and state the nature of its roots.</p>
-                        </div>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="10"></label>
-                    </div>
-                </li>
-            </ol>
+            <div class="question-content">
+                <p>3. The number of points of intersection of the quadratic polynomial <math><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>4</mn></math> with the X axis is</p>
+                 <label class="marks-input-label">Marks<input type="number" class="marks-input" min="0" max="1"></label>
+            </div>
+            <ul class="mcq-options">
+                <li><label><input type="radio" name="q3"> (A) 0</label></li>
+                <li><label><input type="radio" name="q3"> (B) 1</label></li>
+                <li><label><input type="radio" name="q3"> (C) 2</label></li>
+                <li><label><input type="radio" name="q3"> (D) 0 or 1</label></li>
+            </ul>
         </div>
+
+        <div class="question-block">
+            <div class="question-content">
+                <p>4. The slope of the line which is perpendicular to a line joining the points (0,0) and (–8, 8) is</p>
+                <label class="marks-input-label">Marks<input type="number" class="marks-input" min="0" max="1"></label>
+            </div>
+             <ul class="mcq-options">
+                <li><label><input type="radio" name="q4"> (A) –1</label></li>
+                <li><label><input type="radio" name="q4"> (B) 1</label></li>
+                <li><label><input type="radio" name="q4"> (C) 1/3</label></li>
+                <li><label><input type="radio" name="q4"> (D) –8</label></li>
+            </ul>
+        </div>
+
+        <div class="part-header">
+            <h2>Part - II (7 x 2 = 14 Marks)</h2>
+            <p><strong>Note:</strong> Answer any 7 questions.</p>
+        </div>
+        <div class="question-block">
+            <div class="question-content">
+                <p>5. A relation R is given by the set <math><mo>{</mo><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo><mo>|</mo><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo>,</mo><mi>x</mi><mo>&isin;</mo><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>}</mo><mo>}</mo></math>. Determine its domain and range.</p>
+                <label class="marks-input-label">Marks<input type="number" class="marks-input" min="0" max="2"></label>
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="question-content">
+                <p>6. Find the 19th term of an A.P. <math><mo>&minus;</mo><mn>11</mn><mo>,</mo><mo>&minus;</mo><mn>15</mn><mo>,</mo><mo>&minus;</mo><mn>19</mn><mo>,</mo><mo>...</mo></math></p>
+                 <label class="marks-input-label">Marks<input type="number" class="marks-input" min="0" max="2"></label>
+            </div>
+        </div>
+        <div class="part-header">
+            <h2>Part - III (4 x 5 = 20 Marks)</h2>
+            <p><strong>Note:</strong> Answer any 4 questions. <span class="compulsory">Question No. 18 is compulsory.</span></p>
+        </div>
+         <div class="question-block">
+            <div class="question-content">
+                <p>17. State and prove Basic Proportionality Theorem (Thales' Theorem).</p>
+                <label class="marks-input-label">Marks<input type="number" class="marks-input" min="0" max="5"></label>
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="question-content">
+                <p class="compulsory">18. (Compulsory) The average age of Vani, her father, and her grandfather is 53. One-half of her grandfather's age plus one-third of her father's age plus one-fourth of Vani's age is 65. Four years ago, if Vani's grandfather was four times as old as Vani, then how old are they all now?</p>
+                <label class="marks-input-label">Marks<input type="number" class="marks-input" min="0" max="5"></label>
+            </div>
+        </div>
+        <div class="part-header">
+            <h2>Part - IV (1 x 12 = 12 Marks)</h2>
+            <p><strong>Note:</strong> Answer any one of the following.</p>
+        </div>
+        <div class="question-block">
+            <div class="question-content">
+                <p>19. Construct a triangle similar to a given triangle PQR with its sides equal to <math><mfrac><mn>4</mn><mn>5</mn></mfrac></math> of the corresponding sides of the triangle PQR (scale factor <math><mfrac><mn>4</mn><mn>5</mn></mfrac><mo>&lt;</mo><mn>1</mn></math>).</p>
+                <label class="marks-input-label">Marks<input type="number" class="marks-input" min="0" max="12"></label>
+            </div>
+            <p style="text-align:center; font-weight:bold;">(OR)</p>
+            <div class="question-content">
+                 <p>Draw the graph of <math><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></mn></msup><mo>&minus;</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>4</mn></math> and state the nature of its roots.</p>
+                 <label class="marks-input-label">Marks<input type="number" class="marks-input" min="0" max="12"></label>
+            </div>
+        </div>
+
 
         <div class="total-section">
             <button id="calculate-btn">Calculate Total Marks</button>
             <h3>Total Score: <span id="total-marks-display">0</span> / 50</h3>
         </div>
-
     </div>
 
     <script>
@@ -313,106 +320,5 @@
             document.getElementById('total-marks-display').textContent = totalMarks;
         });
     </script>
-
 </body>
-    </html>
-II (Marks: 50)</h2>
-        <p><strong>Note:</strong> Answer any 10 questions. Question No. 42 is compulsory.</p>
-        <div class="question-block">
-            <ol start="29">
-                <li>
-                    <div class="question-content">
-                        <p>Let $f: A \to B$ be a function defined by $f(x) = \frac{x}{2} - 1$, where $A = \{2,4,6,10,12\}$ and $B = \{0,1,2,4,5,9\}$. Represent $f$ by (i) a set of ordered pairs, (ii) a table, (iii) an arrow diagram, and (iv) a graph.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="question-content">
-                        <p>The sum of three consecutive terms that are in an A.P. is 27 and their product is 288. Find the three terms.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>Find the square root of the expression: $4x^4 - 12x^3 + 37x^2 - 42x + 9$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>State and prove the Angle Bisector Theorem.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>Find the equation of a straight line passing through the point of intersection of the lines $8x+3y=18$ and $4x+5y=9$ and bisecting the line segment joining the points $(5, -4)$ and $(-7, 6)$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                <li>
-                     <div class="question-content">
-                        <p>From the top of a tower 50 m high, the angles of depression of the top and bottom of a tree are observed to be 30° and 45° respectively. Find the height of the tree.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-                 <li>
-                     <div class="question-content">
-                        <p><strong>(Compulsory)</strong> Find the sum of the series $10^3 + 11^3 + \dots + 20^3$.</p>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
-                    </div>
-                </li>
-            </ol>
-        </div>
-        
-        <h2>Part - IV (Marks: 16)</h2>
-        <p><strong>Note:</strong> Answer both questions.</p>
-        <div class="question-block">
-            <ol start="43">
-                <li>
-                    <div class="question-content">
-                        <div>
-                            <p>Construct a triangle similar to a given triangle PQR with its sides equal to $\frac{7}{4}$ of the corresponding sides of the triangle PQR (scale factor $\frac{7}{4} > 1$).</p>
-                            <p style="text-align: center; font-weight: bold;">(OR)</p>
-                            <p>Draw a circle of radius 4.5 cm. Take a point on the circle. Draw the tangent at that point using the alternate segment theorem.</p>
-                        </div>
-                        <label>Marks: <input type="number" class="marks-input" min="0" max="8"></label>
-                    </div>
-                </li>
-                 <li>
-                    <div class="question-content">
-                        <div>
-                            <p>Draw the graph of $y = x^2 + x - 2$ and hence solve $x^2 + x - 2 = 0$.</p>
-                            <p style="text-align: center; font-weight: bold;">(OR)</p>
-                             <p>Draw the graph of $y = x^2 - 4x + 4$ and state the nature of its roots.</p>
-                        </div>
-                         <label>Marks: <input type="number" class="marks-input" min="0" max="8"></label>
-                    </div>
-                </li>
-            </ol>
-        </div>
-
-        <div class="total-section">
-            <button id="calculate-btn">Calculate Total Marks</button>
-            <h3>Total Score: <span id="total-marks-display">0</span> / 100</h3>
-        </div>
-
-    </div>
-
-    <script>
-        document.getElementById('calculate-btn').addEventListener('click', () => {
-            const marksInputs = document.querySelectorAll('.marks-input');
-            let totalMarks = 0;
-            marksInputs.forEach(input => {
-                const value = parseInt(input.value, 10);
-                if (!isNaN(value)) {
-                    totalMarks += value;
-                }
-            });
-            document.getElementById('total-marks-display').textContent = totalMarks;
-        });
-    </script>
-
-</body>
-  </html>
-  
+</html>
