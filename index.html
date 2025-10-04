@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10th Standard Mathematics Model Paper</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            text-align: left;
+            font-size: 1.5em;
+            margin-top: 40px;
+            border-bottom: 1px solid #ccc;
+        }
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .question-block {
+            margin-bottom: 20px;
+            padding-left: 15px;
+        }
+        .question-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .marks-input {
+            width: 60px;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-left: 15px;
+        }
+        ol, ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        .options {
+            padding-left: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .total-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #eaf2f8;
+            border-radius: 8px;
+        }
+        #calculate-btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #calculate-btn:hover {
+            background-color: #2980b9;
+        }
+        #total-marks-display {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>10th Standard Mathematics</h1>
+        <h3>Quarterly Examination - Model Paper</h3>
+        <div class="header-info">
+            <span>Time Allowed: 3 Hours</span>
+            <span>Maximum Marks: 100</span>
+        </div>
+        <p><strong>Instructions:</strong> Check the question paper for fairness of printing. If there is any lack of fairness, inform the Hall Supervisor immediately. Use Blue or Black ink to write and underline and pencil to draw diagrams.</p>
+
+        <h2>Part - I (Marks: 14)</h2>
+        <p><strong>Note:</strong> (i) Answer all the 14 questions. (ii) Choose the most suitable answer from the given four alternatives.</p>
+        
+        <div class="question-block">
+            <ol>
+                <li>
+                    <div class="question-content">
+                        <p>If $f(x) = 2x^2 + 1$, then the value of $f(x+1) - f(x)$ is:</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
+                    </div>
+                     <div class="options">
+                        <span>(A) $4x+2$</span>
+                        <span>(B) $4x-2$</span>
+                        <span>(C) $2x+4$</span>
+                        <span>(D) $2x-4$</span>
+                    </div>
+                </li>
+                 <li>
+                    <div class="question-content">
+                        <p>The first term of an A.P. is 5 and its 10th term is 41. Find the common difference.</p>
+                         <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
+                    </div>
+                    <div class="options">
+                        <span>(A) 3</span>
+                        <span>(B) 4</span>
+                        <span>(C) 5</span>
+                        <span>(D) 2</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-content">
+                        <p>The solution of the system $x + y - 3z = -6, -7y + 7z = 7, 3z = 9$ is:</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
+                    </div>
+                    <div class="options">
+                        <span>(A) $x=1, y=2, z=3$</span>
+                        <span>(B) $x=-1, y=2, z=3$</span>
+                        <span>(C) $x=-1, y=-2, z=3$</span>
+                        <span>(D) $x=1, y=-2, z=3$</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-content">
+                        <p>If $\triangle ABC$ is similar to $\triangle DEF$ such that $BC = 3$ cm, $EF = 4$ cm and area of $\triangle ABC = 54$ cm$^2$. The area of $\triangle DEF$ is:</p>
+                         <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
+                    </div>
+                    <div class="options">
+                        <span>(A) 72 cm$^2$</span>
+                        <span>(B) 96 cm$^2$</span>
+                        <span>(C) 108 cm$^2$</span>
+                        <span>(D) 64 cm$^2$</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-content">
+                        <p>The slope of the line which is perpendicular to a line joining the points $(0,0)$ and $(-8,8)$ is:</p>
+                         <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
+                    </div>
+                     <div class="options">
+                        <span>(A) -1</span>
+                        <span>(B) 1</span>
+                        <span>(C) $1/3$</span>
+                        <span>(D) -8</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-content">
+                        <p>The value of $\sin^2\theta + \frac{1}{1+\tan^2\theta}$ is equal to:</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="1"></label>
+                    </div>
+                    <div class="options">
+                        <span>(A) $\tan^2\theta$</span>
+                        <span>(B) 1</span>
+                        <span>(C) $\cot^2\theta$</span>
+                        <span>(D) 0</span>
+                    </div>
+                </li>
+                </ol>
+        </div>
+
+        <h2>Part - II (Marks: 20)</h2>
+        <p><strong>Note:</strong> Answer any 10 questions. Question No. 28 is compulsory.</p>
+        <div class="question-block">
+            <ol start="15">
+                <li>
+                     <div class="question-content">
+                        <p>A relation $R$ is given by the set $\{(x,y) | y = x + 3, x \in \{0,1,2,3,4,5\}\}$. Determine its domain and range.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-content">
+                        <p>Find the sum of the first 15 terms of the A.P. $8, 7\frac{1}{4}, 6\frac{1}{2}, 5\frac{3}{4}, \dots$</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
+                    </div>
+                </li>
+                <li>
+                     <div class="question-content">
+                        <p>Find the GCD of the polynomials $x^3+x^2-x-1$ and $x^3+3x^2+3x+1$.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
+                    </div>
+                </li>
+                 <li>
+                     <div class="question-content">
+                        <p>State and prove the converse of Thales' Theorem.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
+                    </div>
+                </li>
+                <li>
+                     <div class="question-content">
+                        <p>Find the area of the quadrilateral whose vertices are at $(-9, -2), (-8, -4), (2, 2)$ and $(1, -3)$.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
+                    </div>
+                </li>
+                 <li>
+                     <div class="question-content">
+                        <p>Prove the identity: $\sqrt{\frac{1+\sin\theta}{1-\sin\theta}} = \sec\theta + \tan\theta$.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
+                    </div>
+                </li>
+                <li>
+                     <div class="question-content">
+                        <p><strong>(Compulsory)</strong> If $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$ and $B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}$, find $AB$.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="2"></label>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <h2>Part - III (Marks: 50)</h2>
+        <p><strong>Note:</strong> Answer any 10 questions. Question No. 42 is compulsory.</p>
+        <div class="question-block">
+            <ol start="29">
+                <li>
+                    <div class="question-content">
+                        <p>Let $f: A \to B$ be a function defined by $f(x) = \frac{x}{2} - 1$, where $A = \{2,4,6,10,12\}$ and $B = \{0,1,2,4,5,9\}$. Represent $f$ by (i) a set of ordered pairs, (ii) a table, (iii) an arrow diagram, and (iv) a graph.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-content">
+                        <p>The sum of three consecutive terms that are in an A.P. is 27 and their product is 288. Find the three terms.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
+                    </div>
+                </li>
+                <li>
+                     <div class="question-content">
+                        <p>Find the square root of the expression: $4x^4 - 12x^3 + 37x^2 - 42x + 9$.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
+                    </div>
+                </li>
+                <li>
+                     <div class="question-content">
+                        <p>State and prove the Angle Bisector Theorem.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
+                    </div>
+                </li>
+                <li>
+                     <div class="question-content">
+                        <p>Find the equation of a straight line passing through the point of intersection of the lines $8x+3y=18$ and $4x+5y=9$ and bisecting the line segment joining the points $(5, -4)$ and $(-7, 6)$.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
+                    </div>
+                </li>
+                <li>
+                     <div class="question-content">
+                        <p>From the top of a tower 50 m high, the angles of depression of the top and bottom of a tree are observed to be 30° and 45° respectively. Find the height of the tree.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
+                    </div>
+                </li>
+                 <li>
+                     <div class="question-content">
+                        <p><strong>(Compulsory)</strong> Find the sum of the series $10^3 + 11^3 + \dots + 20^3$.</p>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="5"></label>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        
+        <h2>Part - IV (Marks: 16)</h2>
+        <p><strong>Note:</strong> Answer both questions.</p>
+        <div class="question-block">
+            <ol start="43">
+                <li>
+                    <div class="question-content">
+                        <div>
+                            <p>Construct a triangle similar to a given triangle PQR with its sides equal to $\frac{7}{4}$ of the corresponding sides of the triangle PQR (scale factor $\frac{7}{4} > 1$).</p>
+                            <p style="text-align: center; font-weight: bold;">(OR)</p>
+                            <p>Draw a circle of radius 4.5 cm. Take a point on the circle. Draw the tangent at that point using the alternate segment theorem.</p>
+                        </div>
+                        <label>Marks: <input type="number" class="marks-input" min="0" max="8"></label>
+                    </div>
+                </li>
+                 <li>
+                    <div class="question-content">
+                        <div>
+                            <p>Draw the graph of $y = x^2 + x - 2$ and hence solve $x^2 + x - 2 = 0$.</p>
+                            <p style="text-align: center; font-weight: bold;">(OR)</p>
+                             <p>Draw the graph of $y = x^2 - 4x + 4$ and state the nature of its roots.</p>
+                        </div>
+                         <label>Marks: <input type="number" class="marks-input" min="0" max="8"></label>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="total-section">
+            <button id="calculate-btn">Calculate Total Marks</button>
+            <h3>Total Score: <span id="total-marks-display">0</span> / 100</h3>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('calculate-btn').addEventListener('click', () => {
+            const marksInputs = document.querySelectorAll('.marks-input');
+            let totalMarks = 0;
+            marksInputs.forEach(input => {
+                const value = parseInt(input.value, 10);
+                if (!isNaN(value)) {
+                    totalMarks += value;
+                }
+            });
+            document.getElementById('total-marks-display').textContent = totalMarks;
+        });
+    </script>
+
+</body>
+  </html>
+  
